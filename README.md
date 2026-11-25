@@ -8,13 +8,13 @@ check this repository runs; nothing is backfilled.
 
 ## Monitored components
 
-| Component | Endpoint |
-| --- | --- |
-| Submission Intake & API | `https://formroost.com/health/ready` |
+| Component                            | Endpoint                                     |
+| ------------------------------------ | -------------------------------------------- |
+| Submission Intake & API              | `https://formroost.com/health/ready`         |
 | Background Worker & Webhook Delivery | `https://formroost.com/health/status/worker` |
-| Operational Email | `https://formroost.com/health/status/email` |
-| Customer Portal | `https://formroost.com/app/` |
-| Developer Docs | `https://formroost.com/docs/` |
+| Operational Email                    | `https://formroost.com/health/status/email`  |
+| Customer Portal                      | `https://formroost.com/app/`                 |
+| Developer Docs                       | `https://formroost.com/docs/`                |
 
 Each must return HTTP 200. Edit sites in [`.upptimerc.yml`](.upptimerc.yml); the workflows in
 `.github/workflows` are regenerated from it and should not be edited by hand.
