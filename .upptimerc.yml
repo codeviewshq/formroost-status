@@ -1,0 +1,41 @@
+# Upptime config for status.formroost.com. Workflows in .github/workflows are
+# generated from this file by Setup CI; change settings here, not there.
+owner: codeviewshq
+repo: formroost-status
+
+sites:
+  - name: Submission Intake & API
+    url: https://formroost.com/health/ready
+    expectedStatusCodes: [200]
+  - name: Background Worker & Webhook Delivery
+    url: https://formroost.com/health/status/worker
+    expectedStatusCodes: [200]
+  - name: Operational Email
+    url: https://formroost.com/health/status/email
+    expectedStatusCodes: [200]
+  - name: Customer Portal
+    url: https://formroost.com/app/
+    expectedStatusCodes: [200]
+  - name: Developer Docs
+    url: https://formroost.com/docs/
+    expectedStatusCodes: [200]
+
+# Downtime issues are assigned here; GitHub emails the assignee and repo watchers.
+assignees:
+  - p-viral
+
+status-website:
+  cname: status.formroost.com
+  logoUrl: https://raw.githubusercontent.com/codeviewshq/formroost-plugin/main/.claude-plugin/icon.png
+  name: FormRoost Status
+  introTitle: "**FormRoost** real-time system status"
+  introMessage: "Live availability and incident history for FormRoost, monitored externally. No historical data is backfilled."
+  navbar:
+    - title: Status
+      href: /
+    - title: FormRoost
+      href: https://formroost.com
+    - title: Docs
+      href: https://formroost.com/docs/
+    - title: Contact
+      href: https://formroost.com/contact
